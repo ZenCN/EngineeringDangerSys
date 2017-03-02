@@ -1,0 +1,12 @@
+body{
+    font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f0f0;
+    background-image: url(../../image/common/black_bg.png);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    font-size: 14px;
+    overflow: hidden;
+}

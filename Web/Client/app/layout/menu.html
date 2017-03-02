@@ -1,0 +1,14 @@
+﻿<div class="menu">
+    <ul>
+        <li ng-class="{'menu-selected': state.current == 'new'}" ng-click="state.go('new')">
+            <span><i class="glyphicon glyphicon-edit"></i>新建</span>
+        </li>
+        <li ng-class="{'menu-selected': state.current == 'open'}" ng-click="state.go('open')">
+            <span><i class="glyphicon glyphicon-th-list"></i>打开</span>
+        </li>
+    </ul>
+</div>
+
+<div class="{{'frame ' + state.current}}" ui-view>
+
+</div>

@@ -1,0 +1,50 @@
+﻿<div class="frame-left">
+    <p>
+        <span>报表类型:</span>
+        <select ng-model="report.filter.rpt_type.selected_code" ng-change="report.tree.refresh()" style="width: 174px;">
+            <option ng-repeat="type in report.filter.rpt_type.data" value="{{type.id}}"
+                    ng-selected="report.filter.rpt_type.selected_code == type.id">{{type.name}}
+            </option>
+        </select>
+    </p>
+    <p>
+        <span>时段类型:</span>
+        <select style="width: 174px;">
+            <option selected>实时报</option>
+        </select>
+    </p>
+    <ul class="tab">
+        <li class="mybox tab-selected">
+            <span class="title"><i class="icon glyphicon glyphicon-list-alt"></i>我的表箱 </span>
+        </li>
+    </ul>
+    <div class="tree-box">
+        <ul z-tree id="tree" class="ztree" data="report.tree.data[report.filter.rpt_type.selected_code]"
+            state="state.current" open="report.open()">
+        </ul>
+    </div>
+</div>
+<div class="frame-right">
+    <div class="toolbar" ng-if="report.exist(report.current)">
+        <ul>
+            <li ng-show="report.current.is_record" ng-click="report.save()"><i class="glyphicon glyphicon-floppy-disk"></i>保存</li>
+            <li ng-show="report.current.is_record" ng-click="report.send()"><i class="glyphicon glyphicon-open"></i>报送</li>
+            <li ng-show="report.current.is_record" ng-click="report.delete()"><i class="glyphicon glyphicon-remove"></i>删除</li>
+            <li ng-click="report.export.to_excel()"><i class="glyphicon glyphicon-share-alt"></i>导出</li>
+            <li class="maximize"><i class="glyphicon glyphicon-fullscreen"></i></li>
+        </ul>
+    </div>
+    <div class="report" ng-if="report.exist(report.current)">
+        <ul class="tab">
+            <li ng-repeat="rpt in report.opened" ng-click="report.current = rpt"
+                ng-class="{'tab-selected': rpt.pageno == report.current.pageno}">
+                <span class="title">
+                    {{rpt.name}}<a title="关闭" ng-click="report.close()" href="javascript:void(0)">x</a>
+                </span>
+            </li>
+        </ul>
+        <div class="report-content" ng-include="report.current.template">
+
+        </div>
+    </div>
+</div>

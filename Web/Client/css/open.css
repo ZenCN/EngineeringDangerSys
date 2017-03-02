@@ -1,0 +1,31 @@
+.frame.open .frame-left {
+    width: 308px;
+    padding: 5px;
+}
+
+.frame.open .frame-right {
+    padding: 0;
+    left: 308px;
+}
+
+.frame.open .frame-left p {
+    width: 238px;
+    margin: 5px auto;
+}
+
+.frame.open .frame-left .tree-box {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.frame.open .frame-left .tree-box ul {
+    margin: auto 0;
+}
+
+.frame.open .frame-right .report .report-content {
+    padding: 3px 10px;
+}

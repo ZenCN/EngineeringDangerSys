@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0920020-0B95-4855-81EE-6E9C7E8FA322}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Web.Helpers" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ReservoirController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Client\app\app.config.js" />
+    <Content Include="Client\app\app.module.js" />
+    <Content Include="Client\app\app.service.js" />
+    <Content Include="Client\app\controller\datepicker_ctrl.js" />
+    <Content Include="Client\app\directive\ztree_direct.js" />
+    <Content Include="Client\app\layout\head.html" />
+    <Content Include="Client\app\layout\head_ctrl.js" />
+    <Content Include="Client\app\layout\menu.html" />
+    <Content Include="Client\app\layout\menu_ctrl.js" />
+    <Content Include="Client\app\new\new.html" />
+    <Content Include="Client\app\new\new_ctrl.js" />
+    <Content Include="Client\app\open\open.html" />
+    <Content Include="Client\app\open\open_ctrl.js" />
+    <Content Include="Client\app\service\report_svr.js" />
+    <Content Include="Client\app\service\tree_svr.js" />
+    <Content Include="Client\bower_component\angular-loading-bar\loading-bar.css" />
+    <Content Include="Client\bower_component\angular-loading-bar\loading-bar.js" />
+    <Content Include="Client\bower_component\angular-loading-bar\loading-bar.min.css" />
+    <Content Include="Client\bower_component\angular-loading-bar\loading-bar.min.js" />
+    <Content Include="Client\bower_component\angular-ocLazyLoad\ocLazyLoad.js" />
+    <Content Include="Client\bower_component\angular-ocLazyLoad\ocLazyLoad.min.js" />
+    <Content Include="Client\bower_component\angular-ocLazyLoad\ocLazyLoad.require.js" />
+    <Content Include="Client\bower_component\angular-ocLazyLoad\ocLazyLoad.require.min.js" />
+    <Content Include="Client\bower_component\angular-ui\angular-ui-router.js" />
+    <Content Include="Client\bower_component\angular-ui\angular-ui-router.min.js" />
+    <Content Include="Client\bower_component\angular-ui\ui-bootstrap-custom-0.12.1.js" />
+    <Content Include="Client\bower_component\angular-ui\ui-bootstrap-custom-0.12.1.min.js" />
+    <Content Include="Client\bower_component\angular-ui\ui-bootstrap-custom-tpls-0.12.1.js" />
+    <Content Include="Client\bower_component\angular-ui\ui-bootstrap-custom-tpls-0.12.1.min.js" />
+    <Content Include="Client\bower_component\angular\angular-locale_zh-cn.js" />
+    <Content Include="Client\bower_component\angular\angular.js" />
+    <Content Include="Client\bower_component\angular\angular.min.js" />
+    <Content Include="Client\bower_component\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Client\bower_component\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Client\bower_component\bootstrap\css\bootstrap.css" />
+    <Content Include="Client\bower_component\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Client\bower_component\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Client\bower_component\bootstrap\js\bootstrap.js" />
+    <Content Include="Client\bower_component\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Client\bower_component\bootstrap\js\npm.js" />
+    <Content Include="Client\bower_component\extend\common.js" />
+    <Content Include="Client\bower_component\jquery-easydialog\easydialog.css" />
+    <Content Include="Client\bower_component\jquery-easydialog\easydialog.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.all.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.all.min.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.core.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.core.min.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.excheck.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.excheck.min.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.exedit.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.exedit.min.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.exhide.js" />
+    <Content Include="Client\bower_component\jquery-ztree\jquery.ztree.exhide.min.js" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\1_close.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\1_open.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\2.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\3.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\4.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\5.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\6.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\7.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\8.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\diy\9.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\line_conn.gif" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\loading.gif" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\zTreeStandard.gif" />
+    <Content Include="Client\bower_component\jquery-ztree\style\img\zTreeStandard.png" />
+    <Content Include="Client\bower_component\jquery-ztree\style\ztree.css" />
+    <Content Include="Client\bower_component\jquery.cookie.js" />
+    <Content Include="Client\bower_component\jquery\jquery-1.12.4-vsdoc.js" />
+    <Content Include="Client\bower_component\jquery\jquery-1.12.4.intellisense.js" />
+    <Content Include="Client\bower_component\jquery\jquery-1.12.4.js" />
+    <Content Include="Client\bower_component\jquery\jquery-1.12.4.min.js" />
+    <Content Include="Client\css\common\body.css" />
+    <Content Include="Client\css\common\frame.css" />
+    <Content Include="Client\css\common\tab.css" />
+    <Content Include="Client\css\common\table.css" />
+    <Content Include="Client\css\common\toolbar.css" />
+    <Content Include="Client\css\head.css" />
+    <Content Include="Client\css\menu.css" />
+    <Content Include="Client\css\new.css" />
+    <Content Include="Client\css\open.css" />
+    <Content Include="Client\image\common\bar_bg.png" />
+    <Content Include="Client\image\common\black_bg.png" />
+    <Content Include="Client\image\common\column_split.png" />
+    <Content Include="Client\image\common\tab.png" />
+    <Content Include="Client\image\common\toolbar_bg.png" />
+    <Content Include="Client\image\common\vertical_split.png" />
+    <Content Include="Client\image\head\logo.png" />
+    <Content Include="Client\image\head\logo_repeat.png" />
+    <Content Include="Client\image\menu\menu_bg.png" />
+    <Content Include="Client\template\tb01.html" />
+    <Content Include="Client\template\tb02.html" />
+    <Content Include="Client\template\tb03.html" />
+    <Content Include="Client\template\tb04.html" />
+    <Content Include="Client\template\tb05.html" />
+    <Content Include="Client\template\tj01.html" />
+    <Content Include="Client\template\tj02.html" />
+    <Content Include="Client\template\tj03.html" />
+    <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Client\bower_component\angular\angular.min.js.map" />
+    <None Include="Client\bower_component\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Client\bower_component\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Client\bower_component\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Client\bower_component\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{7BB9F761-6F1E-475B-B945-3286A4557F37}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{A3D5F84F-5B96-464C-BFBE-AF27ED745123}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11095</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

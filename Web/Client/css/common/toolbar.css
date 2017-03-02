@@ -1,0 +1,59 @@
+﻿.toolbar {
+    height: 30px;
+    overflow: hidden;
+    background-image: url(../../image/common/bar_bg.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    z-index: 31;
+}
+
+.toolbar ul {
+    background-image: url(../../image/common/bar_bg.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 26px;
+    overflow: hidden;
+}
+
+.toolbar ul li {
+    background-image: url(../../image/common/bar_bg.png);
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    line-height: 26px;
+    color: #fff;
+    margin: 0 0 0 5px;
+    padding: 0 5px;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+    font-size: 14px;
+    border-left: 1px solid transparent;
+}
+
+.toolbar ul li.maximize, .toolbar ul li.restore {
+    float: right;
+}
+
+.toolbar ul li:hover {
+    background-position: right -26px;
+    border-left: 1px solid #466081;
+}
+
+.toolbar ul li i {
+    font-size: 18px;
+    width: 18px;
+    height: 20px;
+    margin: 3px 2px 0 0;
+    display: block;
+    float: left;
+}
+
+/*
+.toolbar ul li.export a {
+    color: #fff;
+    text-decoration: none;
+}*/

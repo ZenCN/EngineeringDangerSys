@@ -1,0 +1,110 @@
+.report-table {
+    border: 1px solid #5F6F7E;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    vert-align: middle;
+}
+
+.report-table caption {
+    font-size: 15px;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+}
+
+.report-table th {
+    border: 1px solid #5F6F7E;
+    background-color: #B0D8FF;
+    min-width: 20px;
+    color: #000000;
+    font-weight: normal;
+    margin: 0;
+    padding: 8px;
+    white-space: nowrap;
+    line-height: 15px;
+    text-align: center;
+}
+
+.report-table td {
+    position: relative;
+    margin: 0;
+    padding: 0 4px;
+    border: 1px solid #888888;
+    height: 24px;
+    line-height: 24px;
+    background-color: #FFF;
+    min-width: 20px;
+}
+
+.report-table td.readonly, .report-table input:disabled {
+    background-color: #eeeeee;
+}
+
+.report-table input[type=text] {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 24px;
+    border: none;
+    text-align: center;
+    vert-align: middle;
+    font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif
+}
+
+.report-table input[type=text]:focus {
+    outline: none;
+}
+
+.report-table select {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 24px;
+    border: none;
+}
+
+.report-table fieldset {
+    text-align: left;
+    margin: 0; /*5px 0*/
+    padding: 0;
+    /*border: 2px solid #D8D4D4;*/
+    border: 1px solid white;
+}
+
+.report-table fieldset legend {
+    margin: 0;
+    font-size: 14px;
+}
+
+.report-table textarea {
+    min-width: 99.7%; /*最大为99.7%超过会溢出*/
+    border: 0;
+    font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif
+}
+
+.report-table tr.title input {
+    width: 100px;
+    border-bottom: 1px solid #CCC7C7;
+}
+
+.report-table th.first_level {
+    background-color: #D0E2F5;
+}
+
+.report-table th.second_level {
+    background-color: #E6F0F9;
+}
+
+.report-table tr.title td {
+    padding-bottom: 5px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}

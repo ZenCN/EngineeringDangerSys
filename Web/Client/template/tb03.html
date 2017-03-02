@@ -1,0 +1,90 @@
+<table class="report-table">
+    <caption>涵闸（泵站）险情表</caption>
+    <tbody>
+    <tr class="title">
+        <td colspan="2" ng-controller="datepicker_ctrl">
+            填报时间：<input type="text" ng-model="report.current.report_time" readonly
+                        datepicker-popup="{{format}}" min-date="minDate" max-date="maxDate"
+                        datepicker-options="dateOptions"
+                        date-disabled="disabled(date, mode)" ng-click="open($event)" is-open="opened"
+                        current-text="今天" close-text="关闭" clear-text="清除">
+        </td>
+        <td colspan="2">
+            填报人：<input type="text" ng-model="report.current.reporter"/>
+        </td>
+        <td colspan="2">签发：（公章）</td>
+    </tr>
+    <tr>
+        <th>涵闸名称</th>
+        <td><input type="text" ng-model="report.current.gate_name"/></td>
+        <th>所在位置</th>
+        <td><input type="text" ng-model="report.current.gate_location"/></td>
+        <th>所在河流</th>
+        <td><input type="text" ng-model="report.current.gate_river"/></td>
+    </tr>
+    <tr>
+        <th>涵闸类型</th>
+        <td><input type="text" ng-model="report.current.gate_type"/></td>
+        <th>涵闸孔数</th>
+        <td><input type="text" ng-model="report.current.gate_holes_num"/></td>
+        <th>闸孔尺寸</th>
+        <td><input type="text" ng-model="report.current.gate_hole_size"/></td>
+    </tr>
+    <tr>
+        <th>闸底高程</th>
+        <td><input type="text" ng-model="report.current.gate_bottom_height"/></td>
+        <th>闸顶高程</th>
+        <td><input type="text" ng-model="report.current.gate_top_height"/></td>
+        <th>启闭形式</th>
+        <td><input type="text" ng-model="report.current.open_close_type"/></td>
+    </tr>
+    <tr>
+        <th>过流能力</th>
+        <td><input type="text" ng-model="report.current.overcurrent_capacity"/></td>
+        <th>特征水位</th>
+        <td colspan="3"><input type="text" ng-model="report.current.characteristic_level"/></td>
+    </tr>
+    <tr>
+        <th>出险时间</th>
+        <td><input type="text" ng-model="report.current.danger_time"/></td>
+        <th>出险位置</th>
+        <td><input type="text" ng-model="report.current.danger_location"/></td>
+        <th>险情类型</th>
+        <td><input type="text" ng-model="report.current.danger_type"/></td>
+    </tr>
+    <tr>
+        <th>河道水位</th>
+        <td><input type="text" ng-model="report.current.river_level"/></td>
+        <th>河流流量</th>
+        <td colspan="3"><input type="text" ng-model="report.current.river_discharge"/></td>
+    </tr>
+    <tr class="details">
+        <td colspan="6">
+            <fieldset>
+                <legend>1、雨水情</legend>
+                <textarea rows="2" ng-model="report.current.rainfall_flood_regime"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>2、对下游的影响范围、人口及重要基础设施情况</legend>
+                <textarea rows="3" ng-model="report.current.impact_on_downstream"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>3、险情简述</legend>
+                <textarea rows="6" ng-model="report.current.danger_brief_introduction"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>4、出险原因</legend>
+                <textarea rows="2" ng-model="report.current.accident_causes"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>5、抢险情况</legend>
+                <textarea rows="9" ng-model="report.current.emergency_situation"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>6、处理措施</legend>
+                <textarea rows="3" ng-model="report.current.reatment_measures"></textarea>
+            </fieldset>
+        </td>
+    </tr>
+    </tbody>
+</table>

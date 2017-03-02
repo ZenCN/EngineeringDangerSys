@@ -1,0 +1,68 @@
+<div class="frame-left">
+    <ul z-tree id="tree" class="ztree" data="new.rpt_type.tree_data" open="new.open(rpt_code)"
+        selected="new.rpt_type.selected" state="state.current">
+    </ul>
+</div>
+<div class="frame-right">
+    <div class="toolbar">
+        <ul></ul>
+    </div>
+    <div class="middle">
+        <p>
+            新建名称：
+            <label>{{new.rpt_type.selected.rpt_name}}</label>
+        </p>
+        <p ng-controller="datepicker_ctrl" ng-show="new.rpt_type.selected.rpt_code.contains('tb')">
+            填报日期：
+            <input type="text" ng-model="new.rpt_type.selected.report_time" readonly
+                   datepicker-popup="{{format}}" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"
+                   date-disabled="disabled(date, mode)" ng-click="open($event)" is-open="write_time_opened"
+                   current-text="今天" close-text="关闭" clear-text="清除">
+        </p>
+        <p ng-controller="datepicker_ctrl" ng-show="new.rpt_type.selected.rpt_code.contains('tj')">
+            填报日期：
+            <input type="text" ng-model="new.rpt_type.selected.start_time" readonly
+                   datepicker-popup="{{format}}" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"
+                   date-disabled="disabled(date, mode)" ng-click="open($event)" is-open="start_time_opened"
+                   current-text="今天" close-text="关闭" clear-text="清除">
+            至
+            <input type="text" ng-model="new.rpt_type.selected.end_time" readonly
+                   datepicker-popup="{{format}}" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions"
+                   date-disabled="disabled(date, mode)" ng-click="open($event)" is-open="end_time_opened"
+                   current-text="今天" close-text="关闭" clear-text="清除">
+        </p>
+        <p>
+            时段类型：
+            <label><input type="radio" checked/> 实时报</label>
+        </p>
+        <div class="m-content">
+            <div class="m-title">
+                <span ng-hide="new.rpt_type.selected.rpt_code.contains('tj')">已有报表</span>
+            </div>
+            <ul class="m-head" ng-hide="new.rpt_type.selected.rpt_code.contains('tj')">
+                <li>
+                    <span class="informant">填报人</span>
+                    <span class="write_date">填报日期</span>
+                    <span class="cyc_type">时段类型</span>
+                    <span class="remark">备注</span>
+                </li>
+            </ul>
+            <div class="m-box" ng-hide="new.rpt_type.selected.rpt_code.contains('tj')">
+                <ul>
+                    <li>
+                        <span class="informant">张三</span>
+                        <span class="write_date">2016年12月09日 10:48</span>
+                        <span class="cyc_type">实时报</span>
+                        <span class="remark">XXXX</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-operate">
+            <input ng-show="new.rpt_type.selected.rpt_code.contains('tb')" type="button" class="btn btn-primary"
+                   value="确认新建" ng-click="new.create()"/>
+            <input ng-show="new.rpt_type.selected.rpt_code.contains('tj')" type="button" class="btn btn-primary"
+                   value="生成" ng-click="new.create(true)"/>
+        </div>
+    </div>
+</div>

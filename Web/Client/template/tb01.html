@@ -1,0 +1,171 @@
+<link rel="stylesheet" href="../css/common/table.css">
+<table class="report-table">
+    <caption>水库（水电站、尾矿坝）险情表</caption>
+    <tbody>
+    <tr class="title">
+        <td colspan="2" ng-controller="datepicker_ctrl">
+            填报时间：<input type="text" ng-model="report.current.report_time" readonly
+                        datepicker-popup="{{format}}" min-date="minDate" max-date="maxDate"
+                        datepicker-options="dateOptions"
+                        date-disabled="disabled(date, mode)" ng-click="open($event)" is-open="opened"
+                        current-text="今天" close-text="关闭" clear-text="清除"/>
+        </td>
+        <td colspan="2">
+            填报人：<input type="text" ng-model="report.current.reporter"/>
+        </td>
+        <td colspan="2">签发：（公章）</td>
+    </tr>
+    <tr>
+        <th>水库名称</th>
+        <td><input type="text" ng-model="report.current.reservoir_name"/></td>
+        <th>所在位置</th>
+        <td><input type="text" ng-model="report.current.reservoir_location"/></td>
+        <th>所在河流</th>
+        <td><input type="text" ng-model="report.current.reservoir_river"/></td>
+    </tr>
+    <tr>
+        <th>建设时间</th>
+        <td ng-controller="datepicker_ctrl">
+            <input type="text" ng-model="report.current.construction_time" readonly
+                   datepicker-popup="yyyy年MM月" min-date="minDate" max-date="maxDate"
+                   datepicker-options="dateOptions"
+                   date-disabled="disabled(date, mode)" ng-click="open($event)" is-open="opened"
+                   current-text="今天" close-text="关闭" clear-text="清除"/>
+        </td>
+        <th>是否病险</th>
+        <td>
+            <label class="checkbox-inline">
+                <input type="radio" name="is_danger" value="1" ng-model="report.current.is_danger"/> 是
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="is_danger" value="0" ng-model="report.current.is_danger"/> 否
+            </label>
+        </td>
+        <th>主管单位</th>
+        <td><input type="text" ng-model="report.current.competent_unit"/></td>
+    </tr>
+    <tr>
+        <th>集雨面积</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.cumulonimbus_area"/>
+                <span class="input-group-addon">km²</span>
+            </div>
+        </td>
+        <th>总库容</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.total_capacity"/>
+                <span class="input-group-addon">万m³</span>
+            </div>
+        </td>
+        <th>大坝类型</th>
+        <td><input type="text" ng-model="report.current.dam_type"/></td>
+    </tr>
+    <tr>
+        <th>坝顶高程</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.dam_top_height"/>
+                <span class="input-group-addon">m</span>
+            </div>
+        </td>
+        <th>泄洪设施</th>
+        <td><input type="text" ng-model="report.current.discharge_facilies"/></td>
+        <th>泄流能力</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.discharge_capacity"/>
+                <span class="input-group-addon">m³/s</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th>汛限水位</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.control_level"/>
+                <span class="input-group-addon">m</span>
+            </div>
+        </td>
+        <th>校核水位</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.check_level"/>
+                <span class="input-group-addon">m</span>
+            </div>
+        </td>
+        <th>设计水位</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.design_level"/>
+                <span class="input-group-addon">m</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <th>出险时间</th>
+        <td ng-controller="datepicker_ctrl">
+            <input type="text" ng-model="report.current.danger_time" readonly
+                        datepicker-popup="{{format}}" min-date="minDate" max-date="maxDate"
+                        datepicker-options="dateOptions"
+                        date-disabled="disabled(date, mode)" ng-click="open($event)" is-open="opened"
+                        current-text="今天" close-text="关闭" clear-text="清除"/>
+        </td>
+        <th>出险位置</th>
+        <td><input type="text" ng-model="report.current.danger_location"/></td>
+        <th>险情类型</th>
+        <td><input type="text" ng-model="report.current.danger_type"/></td>
+    </tr>
+    <tr>
+        <th>当前库水位</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.current_level"/>
+                <span class="input-group-addon">m</span>
+            </div>
+        </td>
+        <th>蓄水量</th>
+        <td>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="report.current.water_storage"/>
+                <span class="input-group-addon">万m³</span>
+            </div>
+        </td>
+        <th>出入库流量</th>
+        <td><input type="text" ng-model="report.current.flow_in_out"/></td>
+    </tr>
+    <tr>
+        <th colspan="2">下游河道安全泄量</th>
+        <td colspan="4"><input type="text" ng-model="report.current.downstream_discharge"/></td>
+    </tr>
+    <tr class="details">
+        <td colspan="6">
+            <fieldset>
+                <legend>1、雨水情</legend>
+                <textarea rows="2" ng-model="report.current.rainfall_flood_regime"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>2、对下游的影响范围、人口及重要基础设施情况</legend>
+                <textarea rows="3" ng-model="report.current.impact_on_downstream"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>3、险情简述</legend>
+                <textarea rows="6" ng-model="report.current.danger_brief_introduction"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>4、出险原因</legend>
+                <textarea rows="2" ng-model="report.current.accident_causes"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>5、抢险情况</legend>
+                <textarea rows="9" ng-model="report.current.emergency_situation"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>6、处理措施</legend>
+                <textarea rows="3" ng-model="report.current.reatment_measures"></textarea>
+            </fieldset>
+        </td>
+    </tr>
+    </tbody>
+</table>

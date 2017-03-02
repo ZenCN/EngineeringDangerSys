@@ -1,0 +1,36 @@
+﻿.frame {
+    position: absolute;
+    top: 117px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    overflow: auto;
+    min-width: 950px;
+    min-height: 510px;
+    z-index: 1;
+    font-size: 14px !important;
+    border-radius: 6px;
+}
+
+.frame-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: #FAFAFA;
+    border-right: 1px solid #e5e5e5;
+    background-image: url(../../image/common/vertical_split.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.frame-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: #FAFAFA;
+}

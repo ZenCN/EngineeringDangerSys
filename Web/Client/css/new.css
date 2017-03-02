@@ -1,0 +1,138 @@
+.frame.new .frame-left {
+    width: 285px;
+    padding: 16px 10px 10px 10px;
+}
+
+.frame.new .frame-right {
+    padding: 0;
+    left: 285px;
+}
+
+.frame-right .middle {
+    width: 600px;
+    margin: 25px auto;
+    text-align: left;
+    color: #023A5A;
+    font-size: 14px;
+}
+
+.frame-right .middle .table_name {
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.frame-right .middle input[type=text] {
+    color: #023A5A;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.frame-right .middle .m-content {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 230px;
+    border: 1px solid #2f609e;
+    border-top: none;
+    border-radius: 10px;
+}
+
+.frame-right .middle .m-content .m-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 27px;
+    overflow: hidden;
+    background-image: url(../image/common/bar_bg.png);
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.frame-right .middle .m-content .m-title span {
+    line-height: 26px;
+    color: #fff;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: bold;
+    height: 26px;
+}
+
+.frame-right .middle .m-content ul.m-head, .frame-right .middle .m-content .m-box ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.frame-right .middle .m-content ul.m-head {
+    height: 26px;
+}
+
+.frame-right .middle .m-content .m-box {
+    position: absolute;
+    top: 53px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.frame-right .middle .m-content ul.m-head li, .frame-right .middle .m-content .m-box ul li {
+    width: 100%;
+    height: 26px;
+    cursor: default;
+}
+
+.frame-right .middle .m-content .m-box ul li:hover {
+    background-color: #F7EBEB;
+}
+
+.frame-right .middle .m-content .m-box ul li.selected{
+    background-color: #E0D6D6;
+}
+
+.frame-right .middle .m-content ul.m-head span, .frame-right .middle .m-content .m-box ul span {
+    font-size: 13px;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 26px;
+}
+
+.frame-right .middle .m-content .m-box ul span {
+    border: 1px solid #EADCDC;
+}
+
+.frame-right .middle .m-content ul.m-head span {
+    font-weight: bold;
+    color: #555;
+    background-image: url(../image/common/column_split.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.frame-right .middle .m-content ul.m-head span.informant, .frame-right .middle .m-content .m-box ul span.informant {
+    width: 27%;
+}
+
+.frame-right .middle .m-content ul.m-head span.write_date, .frame-right .middle .m-content .m-box ul span.write_date {
+    width: 33%;
+}
+
+.frame-right .middle .m-content ul.m-head span.cyc_type, .frame-right .middle .m-content .m-box ul span.cyc_type {
+    width: 12%;
+}
+
+.frame-right .middle .m-content ul.m-head span.remark, .frame-right .middle .m-content .m-box ul span.remark {
+    width: 28%;
+    background-position: 0 0;
+}
+
+.frame-right .middle .m-operate {
+    margin-top: 5px;
+    text-align: center;
+}
